@@ -1,0 +1,19 @@
+@mixin margin($t, $b, $l, $r) {
+    margin-top: $t;
+    margin-bottom: $b;
+    margin-left: $l;
+    margin-right: $r;
+}
+
+@mixin padding($t, $b, $l, $r) {
+    padding-top: $t;
+    padding-bottom: $b;
+    padding-left: $l;
+    padding-right: $r;
+}
+
+@mixin divCenter($display, $jC, $aI) {
+    display: $display;
+    justify-content: $jC;
+    align-items: $aI;
+}

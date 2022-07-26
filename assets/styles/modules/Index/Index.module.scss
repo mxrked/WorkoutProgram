@@ -1,0 +1,230 @@
+// Imports
+@import "../../tools/colors/colors.scss";
+@import "../../tools/mixins/mixins.scss";
+
+@font-face {
+  font-family: "Poppins Regular";
+  src: url("../../../fonts/poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("../../../fonts/poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Poppins Black";
+  src: url("../../../fonts/poppins/Poppins-Black.ttf");
+}
+
+// Desktop
+.index_heading {
+  width: 100%;
+  height: 250px;
+  @include divCenter(flex, center, center);
+  text-align: center;
+
+  div {
+    max-width: 700px;
+
+    h1 {
+      font-family: "Poppins Black";
+      font-size: clamp(2rem, 2vw, 2rem);
+      @include margin(0, 20px, 0, 0);
+      color: $MexicanRed;
+    }
+
+    p {
+      font-family: "Poppins Regular";
+      font-size: clamp(16px, 16px, 16px);
+      line-height: 25px;
+    }
+  }
+}
+
+.index_input_sets_holder {
+  height: 100%;
+  width: 100%;
+  @include divCenter(flex, center, center);
+
+  .index_input_sets_holder_cnt {
+    width: 100%;
+    max-width: 700px;
+
+    
+
+    .index_input_set {
+      display: grid;
+      @include margin(0, 20px, 0, 0);
+
+      label {
+        font-family: "Poppins Bold";
+        font-size: clamp(21px, 21px, 21px);
+        @include margin(0, 10px, 0, 0);
+      }
+
+      input {
+        height: 40px;
+        width: 100%;
+        background-color: ghostwhite;
+        @include padding(10px, 10px, 10px, 10px);
+        font-family: "Poppins Regular";
+        font-size: clamp(14px, 14px, 14px);
+      }
+
+      textarea {
+        width: 100%;
+        height: 140px;
+        resize: none;
+        background-color: ghostwhite;
+        @include padding(10px, 10px, 10px, 10px);
+        font-family: "Poppins Regular";
+        font-size: clamp(14px, 14px, 14px);
+      }
+    }
+  }
+
+  
+
+}
+
+.hidden_data_holder {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+
+.current_data_holder {
+  height: 100%;
+  width: 100%;
+  max-width: 700px;
+  @include margin(auto, auto, auto, auto);
+  @include divCenter(flex, center, center);
+
+  
+
+  .current_data_holder_cnt {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .bi_icon {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    label {
+      font-family: "Poppins Bold";
+      font-size: clamp(21px, 21px, 21px);
+      @include margin(0, 10px, 0, 0);
+    }
+
+    .current_data {
+      width: 100%;
+      height: 180px;
+      @include padding(10px, 10px, 10px, 10px);
+      font-family: "Poppins Regular";
+      overflow: hidden;
+      overflow-y: auto;
+      position: relative;
+      background-color: ghostwhite;
+      cursor: default;
+    }
+  }
+}
+
+.email_holder {
+  height: 100%;
+  width: 100%;
+  max-width: 700px;
+  @include margin(auto, 20px, auto, auto);
+  @include divCenter(flex, center, center);
+
+  div {
+    display: grid;
+    width: 100%;
+    text-align: left;
+
+    label {
+      font-family: "Poppins Bold";
+      font-size: clamp(21px, 21px, 21px);
+      @include margin(0, 10px, 0, 0);
+    }
+
+    input {
+      height: 40px;
+      width: 100%;
+      background-color: ghostwhite;
+      @include padding(10px, 10px, 10px, 10px);
+      font-family: "Poppins Regular";
+      font-size: clamp(14px, 14px, 14px);
+    }
+  }
+}
+
+.btns_holder {
+  height: 120px;
+  max-width: 700px;
+  @include margin(auto, auto, auto, auto);
+  @include padding(0, 20px, 0, 0);
+  @include divCenter(flex, center, center);
+
+  .btns {
+    width: 100%;
+    @include divCenter(flex, flex-start, center);
+
+    button {
+      width: 100%;
+      max-width: 120px;
+      height: 50px;
+      font-family: "Poppins Regular";
+      &:first-child,
+      &:nth-child(2) {
+        margin-right: 20px;
+      }
+    }
+
+    .save_btn,
+    .clear_btn,
+    .email_btn {
+      background-color: $MexicanRed;
+      color: white;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    
+  }
+}
+
+// Responsive
+@media all and (max-width: 1995px) {
+}
+
+@media all and (max-width: 991px) {
+}
+
+@media all and (max-width: 768px) {
+}
+
+@media all and (max-width: 419px) {
+}
+
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+}
